@@ -1,29 +1,33 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Отзыв</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{{ setting.favicon.url }}" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'css/bootstrap_modified.css' %}" rel="stylesheet" />
-    </head>
-    <body>
-        {% block content %}{% endblock content %}
-<!-----------------------------JS BEGIN ---------------------------------------------------------------->
-		<!-- Font Awesome icons (free version)-->
-        <script src="{% static 'js/all.js' %}"></script>
-        <!-- Bootstrap core JS-->
-        <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
-        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-        <!-- Third party plugin JS-->
-        <script src="{% static 'js/jquery.easing.min.js' %}"></script>
-        <!-- Core theme JS-->
-<!-----------------------------JS END ---------------------------------------------------------------->
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Отзыв</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{{ setting.favicon.url }}" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/bootstrap_modified.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+    {% block content %}{% endblock content %}
+    <!-----------------------------JS BEGIN ---------------------------------------------------------------->
+    <!-- Font Awesome icons (free version)-->
+    <script src="{% static 'js/all.js' %}"></script>
+    <!-- Bootstrap core JS-->
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Third party plugin JS-->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <!-- Core theme JS-->
+    <!-----------------------------JS END ---------------------------------------------------------------->
+</body>
+
 </html>

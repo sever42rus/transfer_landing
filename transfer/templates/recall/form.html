@@ -2,30 +2,30 @@
 
 {% load static %}
 {% block content %}
-    <div class="container-fluid" >
-    	<div class='row justify-content-md-center'>
-			<div class="col-sm-12 col-md-8 col-lg-6 col-xl-4">
-                <div class="card p-3 ">
-                    <h3 align="center">Оставьте отзыв</h3>
-                    <hr>
-                    <form method="post">
-                        {% csrf_token %}
-                        {% for field in recall_form %}
-                            <div class="form-group">
-                                {{ field }}
-                                {% if field.errors%}
-                                    <br>
-                                    <div class='alert-danger'>
-                                        {{ field.errors }}
-                                    </div>
-                                {% endif %}
-                            </div>
+<div class="container-fluid">
+    <div class='row justify-content-md-center'>
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4">
+            <div class="card p-3 ">
+                <h3 align="center">Оставьте отзыв</h3>
+                <hr>
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in recall_form %}
+                    <div class="form-group">
+                        {{ field }}
+                        {% if field.errors%}
                         <br>
-                        {% endfor %}
-                        <p align='center'><input class='btn btn-primary' type="submit" value="Отправить"></p>
-                    </form>
-                </div>
-    		</div>
-    	</div>
+                        <div class='alert-danger'>
+                            {{ field.errors }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <br>
+                    {% endfor %}
+                    <p align='center'><input class='btn btn-primary' type="submit" value="Отправить"></p>
+                </form>
+            </div>
+        </div>
     </div>
+</div>
 {% endblock content %}
