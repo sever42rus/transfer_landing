@@ -1,34 +1,27 @@
 import telebot
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
-from django.views.generic import View
+from django.views.generic import TemplateView, View
 from services.models import CarouselInner, Services
 from settings.models import About, SocialNetwork
 
 # Create your views here.
 
 
-class Main(View):
-    def get(self, request):
-        user_agent = request.user_agent
+class MainTemplateViev(TemplateView):
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['about'] = About.objects.all()
+        context['social_networks'] = SocialNetwork.objects.all()
+        context['services'] = Services.objects.all()
+        context['carusels'] = CarouselInner.objects.all()
+        return context
+
+    def get_template_names(self):
+        user_agent = self.request.user_agent
         if user_agent.is_mobile or user_agent.is_tablet:
-            template = "main/index_mobile.html"
+            template_name = "main/index_mobile.html"
         else:
-            template = "main/index_desktop.html"
-
-        # get setting
-        about = About.objects.all()
-        social_networks = SocialNetwork.objects.all()
-        # get services
-        services = Services.objects.all()
-        carusels = CarouselInner.objects.all()
-
-        return render(request, template, context={
-            'about': about,
-            'social_networks': social_networks,
-            'services': services,
-            'carusels': carusels,
-        })
-
-    def post(self, request):
-        pass
+            template_name = "main/index_desktop.html"
+        return template_name

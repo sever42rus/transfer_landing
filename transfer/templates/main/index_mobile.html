@@ -2,20 +2,21 @@
 {% load static %}
 
 {% block top %}
-<section class="page-section-mobile bg-secondary">
+<section class="page-section-mobile bg-secondary" style="">
     <div class="container-fluid-carusel">
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
                 {% for item in carusels %}
-                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" {% if forloop.first
-                    %}class="active" {% endif%}></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" 
+                    {% if forloop.first%} class="active" {% endif %}>
+                </li>
                 {% endfor %}
             </ol>
             <div class="carousel-inner">
                 {% for item in carusels %}
                 <div class="carousel-item {% if forloop.first %} active {% endif%}">
                     <div class="corusel-inner-div-img"
-                        style="background-image: url({{item.img_mobile.url}}); background-size: cover; background-position: center;">
+                        style="background-image: url({{ item.img_mobile.url }}); background-size: cover; background-position: center;">
                     </div>
                     <div class="carousel-caption">
                         <h1>{{ item.title }}</h1>
@@ -31,7 +32,7 @@
 </section>
 {% endblock top %}
 {% block feedback %}
-<section class="page-section bg-secondary">
+<section class="page-section bg-secondary" style="">
     <div class="container-fluid" id="page-top">
         <div class="row masthead_mobile">
             <div class="col-xl-12">

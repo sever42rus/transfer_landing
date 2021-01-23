@@ -10,8 +10,9 @@
 
                     <ol class="carousel-indicators">
                         {% for item in carusels %}
-                        <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" {% if
-                            forloop.first %}class="active" {% endif%}></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" 
+                        {%if forloop.first%} class="active" {% endif %}>
+                        </li>
                         {% endfor %}
                     </ol>
                     <div class="carousel-inner">
