@@ -9,7 +9,7 @@ from .models import Recall, RecallInvite
 class RecallAdmin(admin.ModelAdmin):
 
     list_display = ('feedback', 'title',
-                    'datetime_create', 'datetime_update', )
+                    'datetime_create', 'datetime_update', 'verified',)
 
     fieldsets = (
         (None, {
