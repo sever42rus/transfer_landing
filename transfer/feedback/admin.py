@@ -10,7 +10,7 @@ class CommentFeedbackInLine(admin.TabularInline):
     extra = 1
     fieldsets = (
                 ('None',
-                 {'fields': ('сomment', )},
+                 {'fields': ('comment', )},
                  ),
     )
 
