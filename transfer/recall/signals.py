@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from feedback.models import Feedback
 
-from .models import Recall, RecallInvite
+from .models import RecallInvite
 
 INVITE_MESSAGE = """
 {0}/recall/invite/{1}/

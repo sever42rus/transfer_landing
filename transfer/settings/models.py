@@ -1,6 +1,5 @@
 from ckeditor.fields import RichTextField
 from django.db import models
-from django.utils.safestring import mark_safe
 
 # Create your models here.
 
@@ -72,8 +71,8 @@ class SocialNetwork(models.Model):
         verbose_name_plural = 'Социальные сети'
         verbose_name = 'Социальные сети'
 
-        def __str__(self):
-            return str(self.name)
+    def __str__(self):
+        return str(self.name)
 
 
 class TelegramBot(models.Model):

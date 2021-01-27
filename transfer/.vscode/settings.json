@@ -2,16 +2,20 @@
     "python.pythonPath": "/home/sever42rus/Django/transfer/venv/bin/python",
     "editor.formatOnSave": true,
     "python.formatting.provider": "autopep8",
-    "python.linting.enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": [
-        "--load-plugins pylint_django",
-        "--enable=W0614"
-    ],
     "[python]": {
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.fixAll": true
         }
     },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--django-settings-module=config.settings",
+        "--load-plugins=pylint_django.checkers.migrations",
+        "--disable=C0114, C0115, W0222, C0116, W0613",
+        "--disable=imported-auth-user",
+        "--disable=invalid-name",
+        "--disable=line-too-long"
+    ]
 }

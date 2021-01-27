@@ -30,7 +30,7 @@ class Feedback(models.Model):
 class Comment(models.Model):
     feedback = models.ForeignKey(Feedback, on_delete=models.CASCADE,
                                  verbose_name='Заявка обратной связи', related_name='comment')
-    сomment = models.TextField(verbose_name='Комментарий',)
+    comment = models.TextField(verbose_name='Комментарий',)
     datetime_create = models.DateTimeField(
         default=timezone.now, verbose_name='Дата и время создания',)
 

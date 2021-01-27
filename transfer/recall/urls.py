@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import *
+from .views import RecallListAPI, RecallInviteAdd
 
 urlpatterns = [
     path('api/recalllist/', RecallListAPI.as_view(), name='recall_list'),

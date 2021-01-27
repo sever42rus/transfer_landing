@@ -1,6 +1,5 @@
 from uuid import uuid4
 
-from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils import timezone
 from feedback.models import Feedback

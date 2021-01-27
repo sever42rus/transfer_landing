@@ -2,7 +2,7 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils.safestring import mark_safe
 from imagekit.models.fields import ImageSpecField
-from imagekit.processors import Adjust, ResizeToFill, ResizeToFit
+from imagekit.processors import Adjust, ResizeToFill
 
 # Create your models here.
 

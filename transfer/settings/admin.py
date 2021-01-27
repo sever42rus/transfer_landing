@@ -38,7 +38,7 @@ class SettingAdmin(admin.ModelAdmin):
 
     # @classmethod
     def get_object(self, request, object_id, from_field=None):
-        obj, created = Setting.objects.get_or_create(id=object_id)
+        obj, _ = Setting.objects.get_or_create(id=object_id)
         return obj
 
 
@@ -95,5 +95,5 @@ class TelegramBotAdmin(admin.ModelAdmin):
         return super().response_change(request, obj)
 
     def get_object(self, *args, **kwargs):
-        obj, created = TelegramBot.objects.get_or_create(pk=1)
+        obj, _ = TelegramBot.objects.get_or_create(pk=1)
         return obj

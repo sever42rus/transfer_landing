@@ -1,7 +1,4 @@
-import telebot
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404, redirect, render
-from django.views.generic import TemplateView, View
+from django.views.generic import TemplateView
 from services.models import CarouselInner, Services
 from settings.models import About, SocialNetwork
 

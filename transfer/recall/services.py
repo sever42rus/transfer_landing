@@ -9,9 +9,6 @@ class PaginationReview(PageNumberPagination):
 
     def get_paginated_response(self, data):
 
-        num_pages = self.page.paginator.num_pages
-        page_number = self.page.number
-
         return Response({
             'links': {
                         'next': self.get_next_link(),
